@@ -1,0 +1,89 @@
+@import "../config.scss";
+
+#sec-contents{
+    #contents-t2-wrap{
+        grid-row: 1/8;
+        grid-column: 1 / 10;
+        // border-top: 1px $BORDER;
+        // border-bottom: 1px $BORDER;
+        font-size: $FONT_V*1.5;
+        font-weight: 300;
+        padding-left: 2%;
+    }
+    #contents-wrap{
+        grid-row: 10 / 22;
+        grid-column: 4 / 17;
+        // border: 1px $BORDER;
+        overflow: hidden;
+        width: 400%;
+        display: flex;
+        justify-content: space-between;
+
+        // #band-box{
+        //     position: absolute;
+        //     top: 26%;
+        //     width: 100%;
+        //     height: 65px;
+        //     border-bottom: 1px $BORDER;
+        // }
+        #band-box{
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            top: 39%;
+            border-bottom: 1px $BORDER;
+        }
+        .content{
+            color: $LIGHT_P;
+            width: 500px;
+            height: 400px;
+            align-self: center;
+            border: 2px $BORDER;
+            background: $DARK_S_O;
+            font-weight: 500;
+            overflow: hidden;
+            
+            .content-box{
+                display: absolute;
+                &#content-box-1{
+                    position: absolute;
+                    width: 100%;
+                    height: 60%;
+                    top: 20%;
+                    border: 1px $BORDER;
+                }
+                &#content-box-2{
+                    position: absolute;
+                    width: 40%;
+                    right: 0;
+                    height: 100%;
+                    border: 1px $BORDER;
+                }
+                &#content-box-3{
+                    position: absolute;
+                    transform: rotate(48deg);
+                    height: 100%;
+                    width: 69.5%;
+                    border: 1px $BORDER;
+                }
+            }
+            span{
+                position: absolute;
+                display: block;
+                width: 100%;
+                font-size: $FONT_III;
+                bottom: 50%;
+                padding: 10px 80px 10px 50px;
+                
+            }
+            p{
+                position: absolute;
+                top: 50%;
+                font-size: $FONT_I;
+                font-weight: 300;
+                padding: 10px 80px 10px 50px;
+                line-height: 23px;
+            }
+        }
+    }
+}

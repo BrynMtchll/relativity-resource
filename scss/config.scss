@@ -1,0 +1,181 @@
+$FONT_VI: 81px*1.5;
+$FONT_V: 81px;
+$FONT_IV: 54px;
+$FONT_III: 36px;
+$FONT_II: 24px;
+$FONT_I: 16px;
+$LIGHT_P: rgb(233, 233, 233);
+$LIGHT_S: rgb(190, 193, 204);
+$LIGHT_T: rgb(162, 165, 173);
+$LIGHT_TINT: rgb(238, 238, 232);
+$DARK_P: rgb(24, 24, 24);
+$DARK_S: rgb(69, 74, 95);
+$DARK_S_O: rgba(69, 74, 95, 0.3);
+$NR_INTRO: 102;
+$NC_INTRO: 16;
+$NC_CONTENTS: 16;
+$NR_CONTENTS: 30;
+$NC_MOTION: 16;
+$NR_MOTION: 87;
+$BORDER: solid $LIGHT_P;
+$BORDER_D: solid $DARK_P;
+$BLUE_D: rgb(26, 43, 75);
+$BLUE_L: rgb(136, 0, 95);
+*{
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Georama';
+}
+
+#stars-canvas{
+    position: fixed;
+    z-index: -1;
+    background: hsl(217, 64%, 6%);
+}
+
+.sec{
+    color: $LIGHT_P;
+}
+
+#sec-intro{
+    width: 100vw;
+    height: 3500px;
+    display: grid;
+    grid-template-columns: repeat($NC_INTRO, 1fr);
+    grid-template-rows: repeat($NR_INTRO, 1fr);
+    overflow: hidden;
+}
+
+#sec-contents{
+    width: 100vw;
+    height: 1030px;
+    display: grid;
+    grid-template-columns: repeat($NC_CONTENTS, 1fr);
+    grid-template-rows: repeat($NR_CONTENTS, 1fr);
+    overflow: hidden;
+}
+#sec-gap{
+    width: 100vw;
+    height: 60000px;
+}
+#sec-transition{
+    width: 100vw;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    overflow: hidden;
+    .shade{
+        background: $LIGHT_TINT;
+        opacity: 0.45;
+        grid-column: 1;
+        box-shadow: 0px 50px 80px 50px rgb(24, 19, 5);
+        &#shade-1{
+            grid-row: 1 / 7;
+        }
+        &#shade-2{
+            grid-row: 2 / 7;
+        }
+        &#shade-3{
+            grid-row: 3 / 7;
+        }
+        &#shade-4{
+            grid-row: 4 / 7;
+        }
+        &#shade-5{
+            grid-row: 5 / 7;
+        }
+        &#shade-6{
+            grid-row: 6 / 7;
+            opacity: 1;
+            box-shadow: 0px 50px 80px 50px rgba(24, 19, 5, 0.45);
+
+        }
+    }
+}
+
+#sec-motion{
+    color: $DARK_P;
+    background: $LIGHT_TINT;
+    width: 100vw;
+    height: 3000px;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat($NC_MOTION, 1fr);
+    grid-template-rows: repeat($NR_MOTION, 1fr);
+}
+
+.t2-wrap{
+    font-size: $FONT_V;
+    font-weight: 800;
+}
+
+.motion-sticky-grid-wrap{
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    &#motion-sticky-grid-wrap-1{
+        height: 4895px;
+        top: 0;
+        z-index: 3;
+    }
+    &#motion-sticky-grid-wrap-2{
+        height: 3970px;
+        top: 925px;
+        z-index: 2;
+    }
+
+    .motion-sticky-grid{
+        width: 100%;
+        height: 3000px;
+        display: grid;
+        grid-template-columns: repeat($NC_MOTION, 1fr);
+        grid-template-rows: repeat($NR_MOTION, 1fr);
+        position: sticky;
+        top: 0px;
+    }
+}
+
+#sec-rel-motion{
+    color: $DARK_P;
+    background: $LIGHT_P;
+    width: 100vw;
+    height: 3500px;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat($NC_MOTION, 1fr);
+    grid-template-rows: repeat($NR_MOTION, 1fr);
+}
+
+#sec-reference{
+    width: 100vw;
+    height: 2060px;
+    color: $DARK_P;
+    background: $LIGHT_TINT;
+    display: grid;
+    grid-template-columns: repeat($NC_CONTENTS, 1fr);
+    grid-template-rows: repeat(45, 1fr);
+}
+
+#sec-postulates{
+    width: 100vw;
+    height: 3500px;
+    color: $DARK_P;
+    background: $LIGHT_P;
+    display: grid;
+    grid-template-columns: repeat($NC_MOTION, 1fr);
+    grid-template-rows: repeat($NR_MOTION, 1fr);
+}
+
+.text{
+    font-size: $FONT_I;
+    border-left: 5px $BORDER_D;
+    border-bottom: 1px $BORDER_D;
+    padding-left: 10px;
+    line-height: 25px;
+    span{
+        font-weight: 700;
+    }
+}

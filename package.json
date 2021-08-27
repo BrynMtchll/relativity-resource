@@ -1,0 +1,25 @@
+{
+  "name": "special_relativity",
+  "version": "1.0.0",
+  "description": "physics",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -o dist/css -w scss"
+  },
+  "author": "Brynly Mitchell",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.7.1",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1",
+    "three": "^0.131.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}

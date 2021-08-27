@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- <script type="module">
+        import * as THREE from './resources/threejs/r127/build/three.module.js';
+    </script> -->
+    <title>Special Relativity</title>
+</head>
+<body>
+    <canvas id="stars-canvas"></canvas>
+<!------------------------------------------ PART 1 ----------------------------------------------->
+    <section class="sec" id="sec-intro">
+<!--    landing landing landing landing landing -->
+        <div id="intro-t1-wrap">
+            <h1 class="t1" id="landing-t1">
+                THE <span>REALITY</span> AND <span>RELATIVITY</span> OF <br> <span>TIME</span> TRAVEL
+            </h1>
+        </div>
+        <div id="author-wrap">
+            <h3 id="author">BRYNLY MTICHELL</h3>
+        </div>
+        
+        <div class="vid-wrap" id="intro-vid-wrap">
+            <!-- <span>interstellar clip</span>  -->
+            <div class="vid" id="intro-vid"></div>
+            <!-- <video src="" class="vid" id="intro-vid"></video> -->
+        </div>
+
+        <div class="border-box" id="border-box-6"></div>
+        <!-- <div class="border-box" id="border-box-7"></div> -->
+        <div class="border-box" id="border-box-8"></div>
+        <!-- <div class="border-box" id="border-box-9"></div> -->
+        <div class="border-box" id="border-box-11"></div>
+        <div class="border-box" id="border-box-12"></div>
+
+<!--    physics physics physics physics physics physics-->
+        <div class="tb-wrap" id="phys-tb-wrap">
+            <div class="tb" id="phys-tb">
+                <div class="slider" id="slider-1">PHYSICS&nbsp&nbsp</div> 
+                <div class="slider" id="slider-2">PHYSICS&nbsp&nbsp</div>
+            </div>
+        </div>
+        <div class="sub-t2-wrap" id="phys-sub-t2-wrap">
+            <h2 class="sub-t2" id="phys-sub-t2" >What's this all about?</h2>
+        </div>
+        <div class="t2-wrap" id="phys-t2-wrap">
+            <div class="t2" id="phys-t2">PHYSICS</div>
+        </div>
+
+        <div class="descriptor phys-descriptor" id="phys-descriptor-1"><span>Make a guess, test it against nature </span></div>
+        <div class="descriptor phys-descriptor" id="phys-descriptor-2"><span>Explore and understand the universe</span></div>
+        <div class="descriptor phys-descriptor" id="phys-descriptor-3"><span>Model the fundamentals of science</span></div>
+        <div class="descriptor phys-descriptor" id="phys-descriptor-4"><span>Observe and explain nature </span></div>
+        <div class="vid-wrap" id="phys-vid-wrap">
+            <div></div> 
+        </div>
+        <p class="intro-text" id="phys-intro-text">
+            so let's begin by making some basic <span>observations</span> about <span>space</span> and <span>motion</span>, 
+            and progress from those observations the same way physics has over the past X00 years, 
+            until we reach the current day <span>physics model</span> that concerns itself with the <span>flow</span> of <span>time</span> and the <span>fabric</span> of <span>space</span>.
+        </p>
+    </section>
+<!--    contents contents contents contents contents-->
+    <section class="sec" id="sec-contents">
+        <div class="t2-wrap" id="contents-t2-wrap">
+            <div class="t2" id="contents-t2">MORE SPECIFICALLY </div>
+        </div>
+        <div id="contents-wrap">
+            <div id="band-box"></div>
+            <div class="content" id="content-1">
+                <div class="content-box" id="content-box-1"></div>
+                <div class="content-box" id="content-box-2"></div>
+                <div class="content-box" id="content-box-3"></div>
+                <span>Motion</span>
+                <p class="description">
+                    s <br> a <br> veloctiy
+                </p>
+            </div>
+            <div class="content" id="content-2">
+                <div class="content-box" id="content-box-1"></div>
+                <div class="content-box" id="content-box-2"></div>
+                <div class="content-box" id="content-box-3"></div>
+                <span>Relativity of Motion</span>
+                <p class="description">
+                    you're never absolutely stationary <br>
+                    you're never absolutely moving <br>
+                </p>
+            </div>
+            <div class="content" id="content-3">
+                <div class="content-box" id="content-box-1"></div>
+                <div class="content-box" id="content-box-2"></div>
+                <div class="content-box" id="content-box-3"></div>
+                <span>Laws of Physics in Motion</span>
+                <p class="description">
+                    Inertia <br>
+                    Special relativity first postulate
+                </p>
+            </div>
+            <div class="content" id="content-4">
+                <div class="content-box" id="content-box-1"></div>
+                <div class="content-box" id="content-box-2"></div>
+                <div class="content-box" id="content-box-3"></div>
+                <span>Light Weirdness</span>
+                <p class="description">
+                    s limit of the universe <br>
+                    Special relativity second postulate <br>
+                    the colapse of classical mechanics
+                </p>
+    
+            </div>
+            <div class="content" id="content-5">
+                <div class="content-box" id="content-box-1"></div>
+                <div class="content-box" id="content-box-2"></div>
+                <div class="content-box" id="content-box-3"></div>
+                <span>Linking Time and Space</span>
+                <p class="description">
+                    the slowing and sing of Time <br>
+                    the contracting and stretching of space <br>
+                    in a relative manner
+                </p>
+    
+            </div>
+            <div class="content" id="content-6">
+                <div class="content-box" id="content-box-1"></div>
+                <div class="content-box" id="content-box-2"></div>
+                <div class="content-box" id="content-box-3"></div>
+                <span>Linking Time and Space</span>
+                <p class="description"></p>
+            </div>
+        </div>
+    </section>
+    <section class="sec" id="sec-gap"></section>
+<!-- transition transition transition transition transition-->
+    <section class="sec" id="sec-transition">
+        <div class="shade" id="shade-1"></div>
+        <div class="shade" id="shade-2"></div>
+        <div class="shade" id="shade-3"></div>
+        <div class="shade" id="shade-4"></div>
+        <div class="shade" id="shade-5"></div>
+        <div class="shade" id="shade-6"></div>
+    </section>
+ <!------------------------------------------ PART 2 ----------------------------------------------->
+    <section class="sec" id="sec-motion">
+<!-- sticky demo sticky demo sticky demo -->
+        <div class="motion-sticky-grid-wrap" id="motion-sticky-grid-wrap-1">
+            <div class="motion-sticky-grid" id="motion-sticky-grid-1">
+                <canvas id="motion-canvas"></canvas>
+                <div class="reset-btn" id="s-reset-btn"></div>
+                <div class="s-measure-wrap motion-measure-wrap" id="s-measure-wrap-m">
+                    <span class="measure" id="s-measure-m">0.00</span>
+                    <span class="unit unit-l">m/s</span>
+                    <span class="measure measure-r" id="s-measure-km">0.00</span>
+                    <span class="unit unit-r">km/h</span>
+                </div>
+                
+                <div class="bar" id="s-bar">
+                    <div class="gauge gauge-neg" id="neg-s-gauge"></div>
+                    <div class="gauge gauge-pos" id="pos-s-gauge"></div>
+                </div>
+                <div class="border-box motion-canvas-border-box" id="border-box-13"></div>
+                <div class="border-box motion-canvas-border-box" id="border-box-14"></div>
+            </div>
+        </div>  
+        <div class="motion-sticky-grid-wrap" id="motion-sticky-grid-wrap-2">
+            <div class="motion-sticky-grid" id="motion-sticky-grid-2">
+                <div class="v-measure-wrap motion-measure-wrap" id="v-measure-wrap-x">
+                    <span class="measure" id="v-measure-x"></span>
+                    <span class="unit unit-l">m/s</span>
+                    <span class="unit unit-r">x</span>
+                </div>
+                <div class="bar" id="v-bar-x">
+                    <div class="gauge gauge-neg" id="neg-v-gauge-x"></div>
+                    <div class="gauge gauge-pos" id="pos-v-gauge-x"></div>
+                </div>
+
+                <div class="v-measure-wrap motion-measure-wrap" id="v-measure-wrap-y">
+                    <span class="measure" id="v-measure-y"></span>
+                    <span class="unit unit-l">m/s</span>
+                    <span class="unit unit-r">y</span>
+                </div>
+                <div class="bar" id="v-bar-y">
+                    <div class="gauge gauge-neg" id="neg-v-gauge-y"></div>
+                    <div class="gauge gauge-pos" id="pos-v-gauge-y"></div>
+                </div>
+
+                <div class="v-measure-wrap motion-measure-wrap" id="v-measure-wrap-deg">
+                    <span class="measure" id="v-measure-l"></span>
+                    <span class="unit unit-l">m/s</span>
+                    <span class="measure-r measure" id="v-measure-r">0.00</span>
+                    <span class="unit unit-r">deg</span>
+                </div>
+                <div class="bar" id="v-bar-deg">
+                    <div class="gauge gauge-neg" id="neg-v-gauge-deg"></div>
+                    <div class="gauge gauge-pos" id="pos-v-gauge-deg"></div>
+                </div>
+
+
+                <div id="degrees-axis">
+                    <div id="vert"></div>
+                    <div id="horz"></div>
+                    <div id="needle"><div id="triangle"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="a-measure-wrap motion-measure-wrap" id="a-measure-wrap-deg">
+            <span class="measure" id="a-measure-l"></span>
+            <span class="unit unit-l">m/s/s</span>
+            <span class="measure-r measure" id="a-measure-r">0.00</span>
+            <span class="unit unit-r">deg</span>
+        </div>
+        <div class="bar" id="a-bar-x">
+            <div class="gauge gauge-neg" id="neg-a-gauge-x"></div>
+            <div class="gauge gauge-pos" id="pos-a-gauge-x"></div>
+        </div>
+
+        <div class="a-measure-wrap motion-measure-wrap" id="a-measure-wrap-x">
+            <span class="measure" id="a-measure-x"></span>
+            <span class="unit unit-l">m/s/s</span>
+            <span class="unit unit-r">x</span>
+        </div>
+        <div class="bar" id="a-bar-y">
+            <div class="gauge gauge-neg" id="neg-a-gauge-y"></div>
+            <div class="gauge gauge-pos" id="pos-a-gauge-y"></div>
+        </div>
+
+        <div class="a-measure-wrap motion-measure-wrap" id="a-measure-wrap-y">
+            <span class="measure" id="a-measure-y"></span>
+            <span class="unit unit-l">m/s/s</span>
+            <span class="unit unit-r">y</span>
+        </div>
+
+        <div class="bar" id="a-bar-deg">
+            <div class="gauge gauge-neg" id="neg-a-gauge-deg"></div>
+            <div class="gauge gauge-pos" id="pos-a-gauge-deg"></div>
+        </div>
+
+
+<!-- s s s s s -->
+        <div class="t2-wrap" id="s-t2-wrap">
+            <div class="t2" id="s-t2">SPEED</div>
+        </div>
+        
+        <div class="descriptor s-descriptor" id="s-descriptor-1">movement through space and time</div>
+        <div class="descriptor s-descriptor" id="s-descriptor-2">how fast something moves</div>
+        <div class="descriptor s-descriptor" id="s-descriptor-3">the rate at which something covers a distance</div>
+        
+        <div class="word-band word-band-1 s-word-band" id="s-word-band-1">motion</div>
+        <div class="word-band word-band-2 s-word-band" id="s-word-band-2">movement</div>
+        <div class="word-band word-band-3 s-word-band" id="s-word-band-3">scalar</div>
+        <div class="word-band word-band-4 s-word-band" id="s-word-band-4">magnitude</div>
+
+<!-- v v v v v -->
+
+        <div class="t2-wrap" id="v-t2-wrap">
+            <div class="t2" id="v-t2">VELOCITY</div>
+        </div>
+
+        <div class="descriptor v-descriptor" id="v-descriptor-1">speed with a direction</div>
+        <div class="descriptor v-descriptor" id="v-descriptor-2">the rate at which something changes position</div>
+        <div class="word-band word-band-3 v-word-band" id="v-word-band-1">vector</div>
+        <div class="word-band word-band-4 v-word-band" id="v-word-band-2">direction</div>
+
+<!-- a a a a    a -->
+        <div class="t2-wrap" id="a-t2-wrap">
+            <div class="t2" id="a-t2">ACCELERATION</div>
+        </div>
+
+        <div class="descriptor a-descriptor" id="a-descriptor-1">the change of change</div>
+        <div class="descriptor a-descriptor" id="a-descriptor-2">sing up or slowing down or changing direction</div>
+        <div class="descriptor a-descriptor" id="a-descriptor-3"> the rate at which v changes</div>
+        <div class="word-band word-band-2 a-word-band" id="a-word-band-1">increase</div>
+        <div class="word-band word-band-3 a-word-band" id="a-word-band-2">decrease</div>
+        <div class="word-band word-band-4 a-word-band" id="a-word-band-3">turn</div>
+        <!-- <div id="gravity-border-box"></div> -->
+        <div id="gravity-label">gravity slider</div>
+        <div class="slider-wrap" id="gravity-slider-wrap">
+            <input type="range" value="0" step="0.01" min="0" max="3" id="gravity-slider">
+        </div>
+    </section>
+<!-- ref_frame ref_frame ref_frame ref_frame ref_frame-->
+    <div class="t2-wrap" id="rel-motion-t2-wrap">
+        <div class="t2" id="rel-motion-t2">RELATIVE MOTION</div>
+    </div>
+    <section class="sec" id="sec-rel-motion">
+        <div class="t3-wrap" id="t3-wrap-1">
+            <span class="t3" id="t3-1">
+                What's moving here?
+            </span>
+        </div>  
+        <div class="vid-wrap" id="spin-vid-wrap">
+            <div class="vid" id="spin-vid"></div>
+        </div>
+
+        <div class="t3-wrap" id="t3-wrap-2">
+            <span class="t3" id="t3-2">
+                idk, what defines something as moving?
+            </span>
+        </div>
+        <div class="text" id="text-1">
+            Well, one might say that something is moving if it is not staying fixed 
+            to to some point on the Earth's surface. <br>
+            And that would definitely be very useful for working out things like
+            how quickly you can get somewhere.
+        </div>
+        <div class="vid-wrap" id="nascar-vid-wrap">
+            <div class="vid" id="nascar-vid"></div>
+        </div>
+
+        <div class="t3-wrap" id="t3-wrap-3">
+            <span class="t3" id="t3-3">
+                But is the Earth moving?
+            </span>
+        </div>
+        <div class="text" id="text-2">
+            The answer is yes, and no... relatively.<br>
+            Let's take a look at the solar system.
+        </div>
+        <div id="solar-div"></div>
+        <div class="text" id="text-3">
+            You can't see or feel the Earth moving because your moving with it. <br>
+            In other words, you and the earth are both stationary relative to each other (when your standing on the ground).
+        </div>
+        <div class="t3-wrap" id="t3-wrap-4">
+            <span class="t3" id="t3-4">
+                So motion is relative?
+            </span>
+        </div>
+        <div class="text" id="text-4">
+            The motion of one thing is only measurable in relation to something else. <br>
+            In fact, everything is either moving or stationary relative to everything else in the universe. <br>
+            You can choose to measure the motion something relative to anything else, regardless of size, 
+            and you'll measure different speeds for each.
+        </div>
+        <div class="text" id="text-5">
+            The speed, velocities and accelerations of the ball from the first demo are measured relative to the box the ball's in. <br>
+            If you scroll or move your computer around, those values won't change. 
+        </div>
+    </section> <!--fat-->
+    <section class="sec" id="sec-reference">
+        <div class="t2-wrap" id="reference-t2-wrap">
+            <div class="t2" id="reference-t2">
+                FRAME OF REFERENCE
+            </div>
+        </div>
+        <div class="text" id="text-1">
+            The point which you observe from is called your frame of reference.
+        </div>
+        <div class="t3-wrap" id="t3-wrap-1">
+            <span class="t3" id="t3-1">
+                Galilean invariance.
+            </span>
+        </div> 
+        <div class="text" id="text-2">
+            Newton's laws of motion are the same in all inertial reference frames.
+        </div>
+        <div class="t3-wrap" id="t3-wrap-2">
+            <span class="t3" id="t3-2">
+                What are Newton's laws of motion?
+            </span>
+        </div> 
+        <div class="text" id="text-3">
+            Three statements that dictate the movement of things. <br>
+            1. inertia, 2. acceleration, 3. interacting bodies. <br> 
+            we'll take a look at the first two, the third isn't so relative here.
+        </div>
+        <div class="text" id="text-4">
+            Inertia: things won't change motion (accelerate) unless something pushes or pulls them.
+            <br><br>An <span>inertial</span> reference frame is a <span>non accelerating</span> reference frame.
+        </div>
+        <div class="text" id="text-10">
+            In inertial reference frames, everything works normally. <br>
+            You could play tennis on planes or 
+        </div>
+        <div class="t3-wrap" id="t3-wrap-3">
+            <span class="t3" id="t3-3">
+                But how can a reference frame be accelerating if all motion is relative? And why does it matter?
+            </span>
+        </div>
+        <div class="text" id="text-5">
+            Here it gets a bit tricky. <br> 
+            Cars and other things accelerate because there is some kind of pushing or pulling <span>force</span> that isn’t being <span>evenly</span> opposed. <br>
+            This is what Newton's second law states. <br> 
+            This force is <span>localised</span>, it only acts on a certain bit of it. <br>
+            Subsequently there is a chain reaction where that bit pushes everything it <span>encounters</span>, and those bits push everything they encounter and so on.
+        </div>
+        <div class="text" id="text-6">
+            If you’re sitting in a vehicle, you feel the seat pushing you forwards. 
+        </div>
+        <div class="text" id="text-7">
+            If you're standing, there is nothing to push you and so you get swept off your feet as the floor accelerates underneath you.         
+        </div>
+        <div class="text" id="text-8">
+            is this uneven force acting on an accelerating body that makes the laws of motion act differently. 
+        </div>
+        <div class="text" id="text-9">
+            It’s a different story with acceleration due to gravity though, which we’ll get to later. 
+        </div>
+    </section>
+    <section class="sec" id="sec-postulates">
+        <div class="t2-wrap" id="SR-t2-wrap">
+            <div class="t2" id="SR-t2">SPECIAL RELATIVITY</div>
+        </div>
+        <div class="descriptor" id="descriptor-1"><span>Albert Einstein</span></div>
+        <div class="descriptor" id="descriptor-2"><span>1905</span></div>
+        <div class="descriptor" id="descriptor-3"><span>Theory</span></div>
+        <div class="text" id="text-1">
+            Einstein's theory of special relativity builds from two postulates <br>
+            to construct a totally mind bending explanation <br>
+             for how space and time work
+        </div>
+        <div class="text" id="text-2">
+            Everything talked about up to this point is known as classical physics <br>
+            Everything from this point on falls under the category of modern physics.
+        </div>
+        <div class="t3-wrap" id="t3-wrap-1">
+            <div class="t3" id="t3-1">
+                First Postulate.
+            </div>
+        </div>
+        <div class="text" id="text-3">
+            All laws of <span>physics</span> (not just motion) are consistent across every inertial reference frame. <br>
+            that's acceptable, not too much of an extension from the galilean invariance.
+        </div>
+        <div class="t3-wrap" id="t3-wrap-2">
+            <div class="t3" id="t3-2">
+                Second Postulate.
+            </div>
+        </div>
+        <div class="text" id="text-4">
+            The speed of light in a vacuum always moves at a constant speed of c in every inertial refrence frame.
+        </div>
+        <div class="text" id="text-13">
+            let's explore that a bit.
+        </div>
+
+        <div class="t2-wrap" id="light-t2-wrap">
+            <div class="t2" id="light-t2">
+                LIGHT WEIRDNESS
+            </div>
+        </div>
+        <div class="text" id="text-5">
+            light has a speed.
+        </div>
+        <div class="text" id="text-6">
+            That speed, c, is precisely <span>299 792 458 m/s</span>. Always (in a vacuum).
+        </div>
+        <div class="text" id="text-7">that's around 7.5 laps of the earth every second</div>
+        <div class="text" id="text-9">The speed was derived in the work of James Maxwell on electromagnetism in the nineteenth century</div>
+        <div class="text" id="text-10">Following the first postulate, the laws of physics are the same in all inertial reference frames, <br>
+            including the laws of electromagnetism, from which the <span>constant speed</span> of light is derived.
+        </div>
+        <div class="t3-wrap" id="t3-wrap-3">
+            <div class="t3" id="t3-3">The issue is this breaks galilean relativity</div>
+        </div>
+        <div class="text" id="text-11">
+            Imagine two rockets, rocket Angus and rocket Barry. <br>
+
+            Speed of someone walking forwards on rocket Angus as viewed from rocket Barry. <br>
+            <span>(walk speed relative to Barry) = (walk speed relative to Angus) + (Angus speed relative to Barry).</span> <br>
+            
+            Imagine the <span>speed difference</span> between rocket Barry and rocket Angus is <span>150 000 000 m/s</span>, or about half the speed of light. <br>
+            If light was emitted forwards (with <span>speed c</span>) on rocket Angus (with <span>speed 0.5c</span>), then the <span>speed observed</span> on Barry would be <span>1.5c</span> <br> 
+        </div> 
+        <div class="text" id="text-12">
+            but the speed of light is constant from <span>every</span> inertial reference frame...
+        </div>
+    </section>
+
+</body>
+<script src="../js/stars.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/horz.js"></script>
+<script src="../js/motion.js"></script>
+<!-- <script type="module" src="../js/ocean.js"></script> -->
+</html>
