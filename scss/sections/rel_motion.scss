@@ -14,7 +14,6 @@
         grid-column: 2 / 14;
         font-weight: 400;
         font-size: $FONT_III;
-        border-bottom: 1px $BORDER_D;
         &#t3-wrap-1{
             grid-row: 2 / 3;
         }
@@ -27,38 +26,38 @@
             grid-row: 36 / 37;
         }
         &#t3-wrap-4{
-            grid-row: 68 / 69;
+            grid-row: 66 / 67;
         }
         &#t3-wrap-5{
             grid-row: 36 / 37;
+        }
+
+        .t3{
+            bottom: 2px;
         }
     }
 
     .text{
         &#text-1{
             grid-row: 23 / 27;
-            grid-column: 3 / 10;
+            grid-column: 3 / 14;
             padding-right: 4%;
         }
         &#text-2{
-            grid-row: 38;
+            grid-row: 38 / 41;
             grid-column: 3 / 10;
         }
         &#text-3{
-            grid-row: 62 / 65;
-            grid-column: 2 / 10;
+            grid-row: 62 / 64;
+            grid-column: 3 / 12;
         }
         &#text-4{
-            grid-row: 70 / 77;
-            grid-column: 2 / 10;
+            grid-row: 70 / 75;
+            grid-column: 11 / 16;
         }
         &#text-5{
-            grid-row: 82 / 86;
-            grid-column: 2 / 10;
-        }
-        &#text-6{
-            grid-row: 90 / 92;
-            grid-column: 2 / 10;
+            grid-row: 80 / 82;
+            grid-column: 3 / 11;
         }
     }
 
@@ -71,7 +70,7 @@
         }
 
         &#nascar-vid-wrap{
-            grid-row: 24 / 33;
+            grid-row: 26 / 35;
             grid-column: 10 / 16;
         }
 
@@ -83,9 +82,18 @@
         }
     }
 
+    .demo-wrap{
+
+        &#motion-scale-demo-wrap{
+            grid-row: 68 / 79;
+            grid-column: 2 / 10;
+            border: 1px $BORDER_D;
+        }
+    }
+
     #solar-div{
         grid-column: 2 / 16;
-        grid-row: 40 / 60;
+        grid-row: 42 / 60;
         border: 1px $BORDER_D;
     }
 }

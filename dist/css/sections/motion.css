@@ -107,12 +107,12 @@
 
 #sec-reference {
   width: 100vw;
-  height: 2060px;
+  height: 3500px;
   color: #181818;
   background: #eeeee8;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(45, 1fr); }
+  grid-template-rows: repeat(87, 1fr); }
 
 #sec-postulates {
   width: 100vw;
@@ -125,12 +125,87 @@
 
 .text {
   font-size: 16px;
-  border-left: 5px solid #181818;
-  border-bottom: 1px solid #181818;
+  border-left: 3px solid #181818;
+  font-weight: 500;
   padding-left: 10px;
   line-height: 25px; }
-  .text span {
+  .text .emph {
     font-weight: 700; }
+  .text .light {
+    color: #454a5f; }
+  .text .header {
+    font-size: 24px;
+    left: -10px;
+    padding: 5px 10px 0px 10px;
+    width: 100%; }
+  .text .bottom {
+    position: absolute;
+    bottom: 5px;
+    width: 100%; }
+  .text .bordered {
+    border-top: 1px solid #181818;
+    left: -10px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    font-weight: 400; }
+  .text .right {
+    float: right;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 20px; }
+
+.t3-wrap .underline {
+  position: absolute;
+  border-bottom: 1px solid #181818; }
+  .t3-wrap .underline.underline-1 {
+    bottom: -5px;
+    width: 35%; }
+  .t3-wrap .underline.underline-2 {
+    bottom: -10px;
+    width: 45%; }
+  .t3-wrap .underline.underline-3 {
+    bottom: 0;
+    width: 40%; }
+
+.t3-wrap .date {
+  float: right; }
+
+.bio-wrap .bio-photo {
+  width: 100%;
+  border: 1px solid #181818;
+  height: 250px;
+  margin-bottom: 10px; }
+
+.bio-wrap .bio-years {
+  font-weight: 500;
+  color: #454a5f;
+  margin-bottom: 10px; }
+
+.bio-wrap .bio-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px; }
+
+.bio-wrap .vertline {
+  position: absolute;
+  border-left: 1px solid #181818;
+  height: 100%; }
+  .bio-wrap .vertline.leftline-1 {
+    left: -10px;
+    height: 425px;
+    bottom: -10px; }
+  .bio-wrap .vertline.leftline-2 {
+    left: -20px;
+    height: 445px;
+    bottom: -20px; }
+  .bio-wrap .vertline.rightline-1 {
+    right: -10px;
+    height: 425px;
+    bottom: -10px; }
+  .bio-wrap .vertline.rightline-2 {
+    right: -20px;
+    height: 445px;
+    bottom: -20px; }
 
 #sec-motion .t2-wrap {
   border-bottom: 1px solid #181818;

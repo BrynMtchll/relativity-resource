@@ -151,12 +151,12 @@ $BLUE_L: rgb(136, 0, 95);
 
 #sec-reference{
     width: 100vw;
-    height: 2060px;
+    height: 3500px;
     color: $DARK_P;
     background: $LIGHT_TINT;
     display: grid;
-    grid-template-columns: repeat($NC_CONTENTS, 1fr);
-    grid-template-rows: repeat(45, 1fr);
+    grid-template-columns: repeat($NC_MOTION, 1fr);
+    grid-template-rows: repeat($NR_MOTION, 1fr);
 }
 
 #sec-postulates{
@@ -171,11 +171,108 @@ $BLUE_L: rgb(136, 0, 95);
 
 .text{
     font-size: $FONT_I;
-    border-left: 5px $BORDER_D;
-    border-bottom: 1px $BORDER_D;
+    border-left: 3px $BORDER_D;
+    font-weight: 500;
     padding-left: 10px;
     line-height: 25px;
-    span{
+    .emph{
         font-weight: 700;
+    }
+    .light{
+        color: $DARK_S;
+    }
+    .header{
+        font-size: $FONT_II;
+        left: -10px;
+        padding: 5px 10px 0px 10px;
+        width: 100%;
+    }
+    .bottom{
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+    }
+    .bordered{
+        border-top: 1px $BORDER_D;
+        left: -10px;
+        padding-left: 30px;
+        padding-bottom: 5px;
+        font-weight: 400;
+    }
+    .right{
+        float: right;
+        text-align: right;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.t3-wrap{
+    .underline{
+        position: absolute;
+        border-bottom: 1px $BORDER_D;
+        &.underline-1{
+            bottom: -5px;
+            width: 35%;
+        }
+        &.underline-2{
+            bottom: -10px;
+            width: 45%;
+        }
+        &.underline-3{
+            bottom: 0;
+            width: 40%;
+        }
+    }
+    .date{
+        float: right;
+    }
+}
+
+.bio-wrap{
+    .bio-photo{
+        width: 100%;
+        border: 1px $BORDER_D;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+    .bio-years{
+        font-weight: 500;
+        color: $DARK_S;
+        margin-bottom: 10px;
+    }
+    .bio-name{
+        font-size: $FONT_II;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .vertline{
+        position: absolute;
+        border-left: 1px $BORDER_D;
+        height: 100%;
+        
+        &.leftline-1{
+            left: -10px;
+            height: 425px;
+            bottom: -10px;
+        }
+        &.leftline-2{
+            left: -20px;
+            height: 445px;
+            bottom: -20px;
+
+        }
+        &.rightline-1{
+            right: -10px;
+            height: 425px;
+            bottom: -10px;
+        }
+        &.rightline-2{
+            right: -20px;
+            height: 445px;
+            bottom: -20px;
+
+        }
     }
 }
