@@ -11,7 +11,8 @@
   background: #060d19; }
 
 .sec {
-  color: #e9e9e9; }
+  color: #e9e9e9;
+  min-width: 1300px; }
 
 #sec-intro {
   width: 100vw;
@@ -123,6 +124,15 @@
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(87, 1fr); }
 
+#sec-GR {
+  width: 100vw;
+  height: 3500px;
+  color: #181818;
+  background: #eeeee8;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(87, 1fr); }
+
 .text {
   font-size: 16px;
   border-left: 3px solid #181818;
@@ -137,7 +147,8 @@
     font-size: 24px;
     left: -10px;
     padding: 5px 10px 0px 10px;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 10px; }
   .text .bottom {
     position: absolute;
     bottom: 5px;
@@ -167,8 +178,11 @@
     bottom: 0;
     width: 40%; }
 
-.t3-wrap .date {
-  float: right; }
+.date {
+  color: #454a5f;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  font-size: 36px; }
 
 .bio-wrap .bio-photo {
   width: 100%;
@@ -207,6 +221,10 @@
     height: 445px;
     bottom: -20px; }
 
+.demo-wrap {
+  border: 1px solid #181818;
+  background: purple; }
+
 #sec-reference .t2-wrap {
   grid-column: 1 / 16; }
   #sec-reference .t2-wrap#reference-t2-wrap {
@@ -230,12 +248,8 @@
     grid-row: 50 / 51; }
 
 #sec-reference .date#motion-laws-date {
-  color: #454a5f;
   grid-row: 35 / 45;
-  grid-column: 6 / 8;
-  text-orientation: upright;
-  writing-mode: vertical-lr;
-  font-size: 36px; }
+  grid-column: 6 / 8; }
 
 #sec-reference .text#text-1 {
   grid-row: 5 / 9;
@@ -299,15 +313,11 @@
 
 #sec-reference #motion-reference-demo-wrap {
   grid-row: 10 / 20;
-  grid-column: 2 / 12;
-  border: 1px solid #181818;
-  background: purple; }
+  grid-column: 2 / 12; }
 
 #sec-reference #non-inertial-reference-demo-wrap {
   grid-row: 75 / 85;
-  grid-column: 5 / 12;
-  border: 1px solid #181818;
-  background: purple; }
+  grid-column: 5 / 12; }
 
 #sec-reference #gal-transform-wrap {
   grid-row: 10 / 20;

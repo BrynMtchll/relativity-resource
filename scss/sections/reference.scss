@@ -35,13 +35,8 @@
     }
     .date{
         &#motion-laws-date{
-            color: $DARK_S;
             grid-row: 35 / 45;
             grid-column: 6 / 8;
-            text-orientation: upright;
-            writing-mode: vertical-lr;
-            font-size: $FONT_III;
-            // right: 40%;
         }
     }
     .text{
@@ -114,15 +109,11 @@
     #motion-reference-demo-wrap{
         grid-row: 10 / 20;
         grid-column: 2 / 12;
-        border: 1px $BORDER_D;
-        background: purple;
     }
 
     #non-inertial-reference-demo-wrap{
         grid-row: 75 / 85;
         grid-column: 5 / 12;
-        border: 1px $BORDER_D;
-        background: purple;
     }
     #gal-transform-wrap{
         grid-row: 10 / 20;

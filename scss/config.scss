@@ -37,6 +37,7 @@ $BLUE_L: rgb(136, 0, 95);
 
 .sec{
     color: $LIGHT_P;
+    min-width: 1300px;
 }
 
 #sec-intro{
@@ -168,6 +169,15 @@ $BLUE_L: rgb(136, 0, 95);
     grid-template-columns: repeat($NC_MOTION, 1fr);
     grid-template-rows: repeat($NR_MOTION, 1fr);
 }
+#sec-GR{
+    width: 100vw;
+    height: 3500px;
+    color: $DARK_P;
+    background: $LIGHT_TINT;
+    display: grid;
+    grid-template-columns: repeat($NC_MOTION, 1fr);
+    grid-template-rows: repeat($NR_MOTION, 1fr);
+}
 
 .text{
     font-size: $FONT_I;
@@ -186,6 +196,7 @@ $BLUE_L: rgb(136, 0, 95);
         left: -10px;
         padding: 5px 10px 0px 10px;
         width: 100%;
+        margin-bottom: 10px;
     }
     .bottom{
         position: absolute;
@@ -224,9 +235,13 @@ $BLUE_L: rgb(136, 0, 95);
             width: 40%;
         }
     }
-    .date{
-        float: right;
-    }
+}
+
+.date{
+    color: $DARK_S;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    font-size: $FONT_III;
 }
 
 .bio-wrap{
@@ -275,4 +290,9 @@ $BLUE_L: rgb(136, 0, 95);
 
         }
     }
+}
+
+.demo-wrap{
+    border: 1px $BORDER_D;
+        background: purple;
 }
