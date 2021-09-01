@@ -175,10 +175,12 @@ $BLUE_L: rgb(136, 0, 95);
 }
 #sec-SR-demo{
     width: 100vw;
-    height: 930px;
-    background: orange;
+    height: 1030px;
+    background: $LIGHT_P;
     z-index: 0;
     overflow: hidden;
+    padding-top: 10%;
+    padding-bottom: 10%;
     #SR-demo-wrap{
         width: 100%;
         height: 100%;
