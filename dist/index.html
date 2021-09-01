@@ -31,6 +31,11 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js
+
+
+
+    "></script>
     <!-- <script type="module">
         import * as THREE from './resources/threejs/r127/build/three.module.js';
     </script> -->
@@ -664,13 +669,18 @@
         </div> 
     </section>
     <section class="sec" id="sec-SR-demo">
+        <div class="t3-wrap" id="t3-wrap-1">
+            <div class="t3" id="t3-1">
+                Imagine tracking a very fast rocket from earth using a very good telescope. <br>
+                This is what you would see.
+            </div>
+        </div>
+        <div class=" text" id="SR-credit">
+            <span class="light">Credit for this demo to Karl Saunders</span> 
+        </div>
         <div class="demo-wrap" id="SR-demo-wrap">
             <div id="container">
-
-                <div id="ship">
-            
-                </div>
-            
+                <div id="ship"></div>
                 <label for="velocity">
                 <table id="table">
                     <thead>
@@ -747,8 +757,8 @@
                 </div>
             </label>
             </div>
-            <canvas id="c"></canvas>
-            </div>
+            <canvas id="SR-canvas"></canvas>
+        </div>
     </section>
     <section class="sec" id="sec-GR">
         <div class="t2-wrap" id="GR-t2-wrap">
@@ -769,6 +779,8 @@
         </div>
         <div class="demo-wrap" id="gravity-demo-wrap">
             <!-- yk what goes here ez-->
+            <canvas id="gravity-canvas"></canvas>
+            <div id="gui-wrap"></div>
         </div>
         <div class="sidenote" id="sidenote-1">
             can you make things orbit?
@@ -861,5 +873,6 @@
 <script src="../js/horz.js"></script>
 <script src="../js/motion.js"></script>
 <script src="../js/SR.js"></script>
+<script src="../js/gravity.js"></script>
 <!-- <script type="module" src="../js/ocean.js"></script> -->
 </html>

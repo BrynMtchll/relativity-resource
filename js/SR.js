@@ -48,8 +48,8 @@ let timerReal = false;
 let timerRelative = false;
 let tick = false;
 
-const canvas = $("#c")[0];
-const ctx = canvas.getContext("2d");
+const SRCanvas = $("#SR-canvas")[0];
+const ctx = SRCanvas.getContext("2d");
 const ship = $("#ship")[0];
 const input = $("#velocity")[0];
 const table = $("#table")[0];
@@ -57,19 +57,19 @@ const buttons = $("#buttons")[0];
 const tbody = table.tBodies[0];
 
 
-canvas.width = $("#c").parent().width();
-canvas.height =  $("#c").parent().height();
+SRCanvas.width = $("#SR-canvas").parent().width();
+SRCanvas.height =  $("#SR-canvas").parent().height();
 
 ctx.fillStyle = 'rgba(0,0,0,0.9)';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.fillRect(0, 0, SRCanvas.width, SRCanvas.height);
 
 let SRStars = [];
 
 renderBackground();
 
 window.addEventListener("resize", e => {
-	canvas.width = canvas.parent().width();
-	canvas.height = canvas.parent().height();
+	SRCanvas.width = $("#SR-canvas").parent().width();
+	SRCanvas.height = $("#SR-canvas").parent().height();
 	
 	renderBackground();
 });
@@ -93,7 +93,7 @@ buttons.addEventListener("click", e => {
 function renderBackground() {
 	SRStars = [];
 	for ( let i = 0; i < 200; i++ ) {
-		SRStars.push(new SRStar(rand(0, canvas.width), rand(0, canvas.height), rand(1,3)));
+		SRStars.push(new SRStar(rand(0, SRCanvas.width), rand(0, SRCanvas.height), rand(1,3)));
 	}	
 }
 
@@ -155,7 +155,7 @@ function setTimer() {
 	tbody.rows[2].cells[4].innerHTML = `Time dilation factor: ${factor.toFixed(2)}`;
 	
 	if ( v > 0 ) {
-		tbody.rows[4].cells[0].innerHTML = `1yr on ship = ${factor.toFixed(2)} yrs on Earth | Time to Andromeda as seen from Earth: ${years(ANDROMEDA / v)}yrs | Time to Andromeda as experienced on ship: ${years((ANDROMEDA / v) / factor)}yrs`;
+		tbody.rows[4].cells[0].innerHTML = `1yr on ship = ${factor.toFixed(2)} yrs on Earth &nbsp &nbsp &nbsp &nbsp  | &nbsp &nbsp &nbsp &nbsp  Time to Andromeda as seen from Earth: ${years(ANDROMEDA / v)}yrs &nbsp &nbsp | &nbsp &nbsp &nbsp &nbsp  Time to Andromeda as experienced on ship: ${years((ANDROMEDA / v) / factor)}yrs`;
 	}
 }
 
@@ -242,22 +242,34 @@ function start() {
 	}
 }
 
+const SR_CUT_POINT = 26000;
+
+function onScroll() {
+	if ($(window).scrollTop() < SR_CUT_POINT && $(window).scrollTop() > SR_CUT_POINT-2000){
+	  animateSRStars();
+	}
+  } 
 
 function animateSRStars() {
 	const v = parseInt(input.value, 10);
-	tick = requestAnimationFrame(animateSRStars);
-	
+	if ($(window).scrollTop() > SR_CUT_POINT || $(window).scrollTop() < SR_CUT_POINT-2000){
+		animatingSR = false;
+		document.addEventListener('scroll', onScroll, false);
+	  } else {
+		document.removeEventListener('scroll', onScroll, false);
+		window.requestAnimationFrame(animateSRStars);
+	  }
 	ctx.fillStyle = "#000";
-	ctx.clearRect(0,0,canvas.width,canvas.height);
-	ctx.fillRect(0,0,canvas.width,canvas.height);
+	ctx.clearRect(0,0,SRCanvas.width,SRCanvas.height);
+	ctx.fillRect(0,0,SRCanvas.width,SRCanvas.height);
 	
 	for ( const star of SRStars ) {
 		
 		const inc = (v/c) * star.r * 40;
 		
 		if ( star.pos.x <= 0 ) {
-			star.pos.x = rand(canvas.width, canvas.width * 1.5);
-			star.pos.y = rand(0, canvas.height);
+			star.pos.x = rand(SRCanvas.width, SRCanvas.width * 1.5);
+			star.pos.y = rand(0, SRCanvas.height);
 		}
 		
 		star.pos.x -= inc;

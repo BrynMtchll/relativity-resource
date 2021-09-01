@@ -14,6 +14,15 @@
   border: 1px solid #181818;
   background: purple; }
 
+#gui {
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: 500px;
+  background: purple;
+  left: 0;
+  z-index: 100; }
+
 .sec {
   color: #e9e9e9;
   min-width: 1300px; }
@@ -132,14 +141,11 @@
   width: 100vw;
   height: 1030px;
   background: #e9e9e9;
-  z-index: 0;
-  overflow: hidden;
-  padding-top: 10%;
-  padding-bottom: 10%; }
+  z-index: 3;
+  color: #181818; }
   #sec-SR-demo #SR-demo-wrap {
     width: 100%;
-    height: 100%;
-    background: blue;
+    height: 98%;
     z-index: 0; }
 
 #sec-GR {
@@ -239,217 +245,206 @@
     height: 445px;
     bottom: -20px; }
 
-#container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 6.5%; }
-
-#ship {
-  width: 1000px;
-  height: 428px;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/orbiter.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: relative; }
-
-#table {
-  width: 100%;
-  border-spacing: 0; }
-
-table > tbody > tr > td,
-table > tbody > tr > th,
-table > tfoot > tr > td,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > thead > tr > th {
-  vertical-align: top;
-  padding: 12px 20px; }
-
-table > thead > tr > th {
-  vertical-align: bottom;
-  text-align: left;
-  border-bottom: 1px solid #d9d9d9; }
-
-table > tfoot > tr > th {
-  vertical-align: bottom;
-  text-align: left;
-  border-top: 1px solid #d9d9d9; }
-
-table th {
-  vertical-align: bottom;
-  text-align: left; }
-
-th, td {
-  width: 20%;
-  vertical-align: middle;
-  font-size: 14px; }
-
-label {
-  width: 100%;
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-  label input {
+#sec-SR-demo {
+  /* BACKGROUND */ }
+  #sec-SR-demo #SR-demo-wrap {
+    color: #e9e9e9; }
+  #sec-SR-demo .t3-wrap {
+    font-weight: 400;
+    font-size: 36px;
+    position: absolute;
+    top: -120px;
     width: 100%;
-    margin-top: 20px; }
-  label .value {
+    text-align: center;
+    z-index: 50; }
+  #sec-SR-demo #SR-credit {
+    position: absolute;
+    right: 6.25%;
+    border: 0;
+    top: -25px; }
+  #sec-SR-demo #container {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
-
-#buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 10px; }
-
-.jump {
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  padding: 6px 12px;
-  color: #fff;
-  font-family: "Roboto Mono";
-  cursor: pointer; }
-  .jump:hover, .jump:active {
-    background-color: #fff;
-    color: #000; }
-
-.time {
-  position: relative; }
-
-.timer {
-  padding-left: 28px; }
-
-.clock {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .clock.running div {
-    animation: 1000ms linear 0ms forwards infinite rotate; }
-  .clock div {
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 6.5%; }
+  #sec-SR-demo #ship {
+    width: 1000px;
+    height: 428px;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/orbiter.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative; }
+  #sec-SR-demo #table {
+    width: 100%;
+    border-spacing: 0; }
+  #sec-SR-demo table > tbody > tr > td,
+  #sec-SR-demo table > tbody > tr > th,
+  #sec-SR-demo table > tfoot > tr > td,
+  #sec-SR-demo table > tfoot > tr > th,
+  #sec-SR-demo table > thead > tr > td,
+  #sec-SR-demo table > thead > tr > th {
+    vertical-align: top;
+    padding: 12px 20px; }
+  #sec-SR-demo table > thead > tr > th {
+    vertical-align: bottom;
+    text-align: left;
+    border-bottom: 1px solid #d9d9d9; }
+  #sec-SR-demo table > tfoot > tr > th {
+    vertical-align: bottom;
+    text-align: left;
+    border-top: 1px solid #d9d9d9; }
+  #sec-SR-demo table th {
+    vertical-align: bottom;
+    text-align: left; }
+  #sec-SR-demo th, #sec-SR-demo td {
+    width: 20%;
+    vertical-align: middle;
+    font-size: 14px; }
+  #sec-SR-demo label {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    #sec-SR-demo label input {
+      width: 100%;
+      margin-top: 20px; }
+    #sec-SR-demo label .value {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+  #sec-SR-demo #buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px; }
+  #sec-SR-demo .jump {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 6px 12px;
+    color: #fff;
+    font-family: "Roboto Mono";
+    cursor: pointer; }
+    #sec-SR-demo .jump:hover, #sec-SR-demo .jump:active {
+      background-color: #fff;
+      color: #000; }
+  #sec-SR-demo .time {
+    position: relative; }
+  #sec-SR-demo .timer {
+    padding-left: 28px; }
+  #sec-SR-demo .clock {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
     position: absolute;
-    width: 2px;
-    height: 8px;
-    background-color: #fff;
-    outline: 1px solid transparent;
-    transform: rotate(0deg);
-    top: 2px;
-    transform-origin: 50% 100% 0; }
+    top: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #sec-SR-demo .clock.running div {
+      animation: 1000ms linear 0ms forwards infinite rotate; }
+    #sec-SR-demo .clock div {
+      position: absolute;
+      width: 2px;
+      height: 8px;
+      background-color: #fff;
+      outline: 1px solid transparent;
+      transform: rotate(0deg);
+      top: 2px;
+      transform-origin: 50% 100% 0; }
 
 @keyframes rotate {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-
-/* BACKGROUND */
-#c {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: -1; }
-
-input[type=range] {
-  height: 26px;
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%; }
-
-input[type=range]:focus {
-  outline: none; }
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 0px 0px 0px #000000;
-  background: #FFFFFF;
-  border-radius: 3px;
-  border: 0px solid #000000; }
-
-input[type=range]::-webkit-slider-thumb {
-  box-shadow: 0px 0px 0px #000000;
-  border: 2px solid #000000;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
-  background: #FFFFFF;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -7px; }
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #FFFFFF; }
-
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 0px 0px 0px #000000;
-  background: #FFFFFF;
-  border-radius: 3px;
-  border: 0px solid #000000; }
-
-input[type=range]::-moz-range-thumb {
-  box-shadow: 0px 0px 0px #000000;
-  border: 2px solid #000000;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
-  background: #FFFFFF;
-  cursor: pointer; }
-
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  color: transparent; }
-
-input[type=range]::-ms-fill-lower {
-  background: #FFFFFF;
-  border: 0px solid #000000;
-  border-radius: 6px;
-  box-shadow: 0px 0px 0px #000000; }
-
-input[type=range]::-ms-fill-upper {
-  background: #FFFFFF;
-  border: 0px solid #000000;
-  border-radius: 6px;
-  box-shadow: 0px 0px 0px #000000; }
-
-input[type=range]::-ms-thumb {
-  margin-top: 1px;
-  box-shadow: 0px 0px 0px #000000;
-  border: 2px solid #000000;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
-  background: #FFFFFF;
-  cursor: pointer; }
-
-input[type=range]:focus::-ms-fill-lower {
-  background: #FFFFFF; }
-
-input[type=range]:focus::-ms-fill-upper {
-  background: #FFFFFF; }
+  #sec-SR-demo #SR-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1; }
+  #sec-SR-demo input[type=range] {
+    height: 26px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%; }
+  #sec-SR-demo input[type=range]:focus {
+    outline: none; }
+  #sec-SR-demo input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #FFFFFF;
+    border-radius: 3px;
+    border: 0px solid #000000; }
+  #sec-SR-demo input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 2px solid #000000;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px; }
+  #sec-SR-demo input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF; }
+  #sec-SR-demo input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #FFFFFF;
+    border-radius: 3px;
+    border: 0px solid #000000; }
+  #sec-SR-demo input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 2px solid #000000;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer; }
+  #sec-SR-demo input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent; }
+  #sec-SR-demo input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px #000000; }
+  #sec-SR-demo input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px #000000; }
+  #sec-SR-demo input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 2px solid #000000;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer; }
+  #sec-SR-demo input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF; }
+  #sec-SR-demo input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF; }

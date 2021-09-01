@@ -84,11 +84,10 @@ Star.prototype.draw = function() {
 for (let i = 0; i < maxStars; i++) {
   new Star();
 }
-let animating = false, animate10 = 0;
-const CUT_POINT = 10000;
+const STARS_CUT_POINT = 10000;
 
 function onScroll() {
-  if ($(window).scrollTop() < CUT_POINT){
+  if ($(window).scrollTop() < STARS_CUT_POINT){
     animation();
   }
 } 
@@ -104,8 +103,7 @@ function animation() {
   for (let i = 1, l = stars.length; i < l; i++) {
     stars[i].draw();
   };  
-  if ($(window).scrollTop() > CUT_POINT){
-    animating = false;
+  if ($(window).scrollTop() > STARS_CUT_POINT){
     document.addEventListener('scroll', onScroll, false);
   } else {
     document.removeEventListener('scroll', onScroll, false);
