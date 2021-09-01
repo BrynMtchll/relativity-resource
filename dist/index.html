@@ -30,6 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- <script type="module">
         import * as THREE from './resources/threejs/r127/build/three.module.js';
     </script> -->
@@ -85,7 +86,7 @@
         </div>
         <p class="intro-text" id="phys-intro-text">
             So let's begin by making some basic <span>observations</span> about <span>space</span> and <span>motion</span>, 
-            and progress from those observations the same way physics has over the past X00 years, 
+            and progress from those observations the same way physics has over the past 400 years, 
             until we reach the current day <span>physics model</span> that concerns itself with the <span>flow</span> of <span>time</span> and the <span>fabric</span> of <span>space</span>.
         </p>
     </section>
@@ -380,7 +381,7 @@
             </span>
         </div>
         <div class="demo-wrap" id="motion-scale-demo-wrap">
-            <!-- zoom from person walking on earth to earth speed around the sun etc, listing relative motions -->
+            <!-- zoom from person walking on earth to earth speed around the sun etc, listing relative motions hard-->
         </div>
         <div class="text" id="text-5">
             The speed, velocities and accelerations of the ball from the first demo are measured relative to the box the ball's in. <br>
@@ -661,7 +662,93 @@
                 and look shorter.
             </div>
         </div> 
+    </section>
+    <section class="sec" id="sec-SR-demo">
+        <div class="demo-wrap" id="SR-demo-wrap">
+            <div id="container">
 
+                <div id="ship">
+            
+                </div>
+            
+                <label for="velocity">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Velocity</th>
+                            <th>Length</th>
+                            <th>Mass</th>
+                            <th>Energy</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="time">
+                                <div class="clock">
+                                    <div></div>
+                                </div>
+                                <div class="timer"></div>			
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="time">
+                                <div class="clock">
+                                    <div></div>
+                                </div>
+                                <div class="timer"></div>					
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                        </tr>				
+                    </tbody>
+                </table>
+                <input id="velocity" type="range" value="0" min="0" step="1">
+                <div id="buttons">
+                    <div>Jump</div>
+                    <button type="button" class="jump" data-value="0.00">0.00c</button>
+                    <button type="button" class="jump" data-value="0.01">0.01c</button>
+                    <button type="button" class="jump" data-value="0.25">0.25c</button>
+                    <button type="button" class="jump" data-value="0.50">0.50c</button>
+                    <button type="button" class="jump" data-value="0.75">0.75c</button>
+                    <button type="button" class="jump" data-value="0.90">0.90c</button>
+                    <button type="button" class="jump" data-value="0.95">0.95c</button>
+                    <button type="button" class="jump" data-value="0.99">0.99c</button>
+                    <button type="button" class="jump" data-value="0.999">0.999c</button>
+                    <button type="button" class="jump" data-value="0.9999">0.9999c</button>
+                    <button type="button" class="jump" data-value="0.99999">0.99999c</button>
+                    <button type="button" class="jump" data-value="0.999999">0.999999c</button>
+                    <button type="button" class="jump" data-value="0.9999999">0.9999999c</button>
+                    <button type="button" class="jump" data-value="0.99999999">0.99999999c</button>
+                    <button type="button" class="jump" data-value="1">1c</button>
+                </div>
+            </label>
+            </div>
+            <canvas id="c"></canvas>
+            </div>
     </section>
     <section class="sec" id="sec-GR">
         <div class="t2-wrap" id="GR-t2-wrap">
@@ -681,7 +768,7 @@
             </div>
         </div>
         <div class="demo-wrap" id="gravity-demo-wrap">
-            <!-- yk what goes here -->
+            <!-- yk what goes here ez-->
         </div>
         <div class="sidenote" id="sidenote-1">
             can you make things orbit?
@@ -773,5 +860,6 @@
 <script src="../js/index.js"></script>
 <script src="../js/horz.js"></script>
 <script src="../js/motion.js"></script>
+<script src="../js/SR.js"></script>
 <!-- <script type="module" src="../js/ocean.js"></script> -->
 </html>

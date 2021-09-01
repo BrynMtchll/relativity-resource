@@ -1,0 +1,256 @@
+@import "../config.scss";
+
+#container {
+	width: 100%;
+    height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+    padding: 0 6.5%;
+}
+
+#ship {
+	width: 1000px;
+	height: 428px;
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/orbiter.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	// transition: transform 500ms ease 0ms;
+}
+
+#table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+table > tbody > tr > td,
+table > tbody > tr > th,
+table > tfoot > tr > td,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > thead > tr > th {
+	vertical-align: top;
+	padding: 12px 20px;
+}
+
+table > thead > tr > th {
+	vertical-align: bottom;
+	text-align: left;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+table > tfoot > tr > th {
+	vertical-align: bottom;
+	text-align: left;
+	border-top: 1px solid #d9d9d9;
+}
+
+table th {
+	vertical-align: bottom;
+	text-align: left;
+}
+
+th, td {
+	width: 20%;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+label {
+	width: 100%;
+	margin: 20px 0;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+	input {
+		width: 100%;
+		margin-top: 20px;
+	}
+	
+	.value {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+#buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.jump {
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	padding: 6px 12px;
+	color: #fff;
+	font-family: "Roboto Mono";
+	cursor: pointer;
+	
+	&:hover, &:active {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+
+$stroke: 2px;
+$diameter: 20px;
+$radius: $diameter * 0.5;
+
+.time {
+	position: relative;
+}
+
+.timer {
+	padding-left: $diameter + $stroke * 4;
+}
+
+.clock {
+	width: $diameter;
+	height: $diameter;
+	border: $stroke solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 9px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&.running {
+		div {
+			animation: 1000ms linear 0ms forwards infinite rotate;
+		}
+	}
+	
+	div {
+		position: absolute;
+		width: $stroke;
+		height: $radius * 0.8;
+		background-color: #fff;
+		outline: 1px solid transparent;
+		transform: rotate(0deg);
+		
+		top: $radius - ($radius * 0.8);
+		transform-origin: 50% 100% 0;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}	
+}
+
+/* BACKGROUND */
+
+#c {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+    z-index: -1;
+}
+
+input[type=range] {
+  height: 26px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 2px solid #000000;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #FFFFFF;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 2px solid #000000;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #FFFFFF;
+  border: 0px solid #000000;
+  border-radius: 6px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #FFFFFF;
+  border: 0px solid #000000;
+  border-radius: 6px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 2px solid #000000;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #FFFFFF;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #FFFFFF;
+}

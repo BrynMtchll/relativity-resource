@@ -137,7 +137,6 @@ function track() {
     if (angle < 0) angle = 360 + angle;
 
 
-    console.log(gravity*FPS/PPM);
     vxms = vx*FPS/PPM, vyms = -vy*FPS/PPM;
     oldvxms = oldvx*FPS/PPM, oldvyms = -oldvy*FPS/PPM;
     let dvxms = vxms-oldvxms, dvyms = vyms-oldvyms;
@@ -225,6 +224,5 @@ function drawFrame () {
 let gravitySlider = document.getElementById("gravity-slider")
     gravitySlider.addEventListener('input', () => {
         gravity = parseFloat(gravitySlider.value)*PPM/FPS;
-        console.log
 });
 drawFrame();
