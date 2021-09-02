@@ -244,7 +244,7 @@ function start() {
 
 const SR_CUT_POINT = 26000;
 
-function onScroll() {
+function SROnScroll() {
 	if ($(window).scrollTop() < SR_CUT_POINT && $(window).scrollTop() > SR_CUT_POINT-2000){
 	  animateSRStars();
 	}
@@ -254,9 +254,9 @@ function animateSRStars() {
 	const v = parseInt(input.value, 10);
 	if ($(window).scrollTop() > SR_CUT_POINT || $(window).scrollTop() < SR_CUT_POINT-2000){
 		animatingSR = false;
-		document.addEventListener('scroll', onScroll, false);
+		document.addEventListener('scroll', SROnScroll, false);
 	  } else {
-		document.removeEventListener('scroll', onScroll, false);
+		document.removeEventListener('scroll', SROnScroll, false);
 		window.requestAnimationFrame(animateSRStars);
 	  }
 	ctx.fillStyle = "#000";

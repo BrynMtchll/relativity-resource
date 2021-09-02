@@ -86,7 +86,7 @@ for (let i = 0; i < maxStars; i++) {
 }
 const STARS_CUT_POINT = 10000;
 
-function onScroll() {
+function starsOnScroll() {
   if ($(window).scrollTop() < STARS_CUT_POINT){
     animation();
   }
@@ -104,9 +104,9 @@ function animation() {
     stars[i].draw();
   };  
   if ($(window).scrollTop() > STARS_CUT_POINT){
-    document.addEventListener('scroll', onScroll, false);
+    document.addEventListener('scroll', starsOnScroll, false);
   } else {
-    document.removeEventListener('scroll', onScroll, false);
+    document.removeEventListener('scroll', starsOnScroll, false);
     window.requestAnimationFrame(animation);
   }
 }

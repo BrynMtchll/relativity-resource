@@ -300,6 +300,9 @@
   #sec-rel-motion .vid-wrap#nascar-vid-wrap {
     grid-row: 26 / 35;
     grid-column: 10 / 16; }
+    #sec-rel-motion .vid-wrap#nascar-vid-wrap #nascar-vid {
+      width: 100%;
+      height: 100%; }
   #sec-rel-motion .vid-wrap .vid {
     border: 1px solid #181818;
     width: 100%;
