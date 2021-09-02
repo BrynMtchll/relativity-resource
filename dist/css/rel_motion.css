@@ -297,6 +297,9 @@
   #sec-rel-motion .vid-wrap#spin-vid-wrap {
     grid-row: 4 / 18;
     grid-column: 2 / 12; }
+    #sec-rel-motion .vid-wrap#spin-vid-wrap #spin-vid {
+      background-image: url("../../media/interstellar-docking.gif");
+      background-size: cover; }
   #sec-rel-motion .vid-wrap#nascar-vid-wrap {
     grid-row: 26 / 35;
     grid-column: 10 / 16; }

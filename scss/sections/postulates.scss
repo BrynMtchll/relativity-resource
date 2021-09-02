@@ -121,7 +121,8 @@
         grid-row: 34 / 44;
         grid-column: 10 / 16;
         border: 1px $BORDER_D;
-        background: purple;
+        background-image: url("../../media/light-speed.gif");
+        background-size: cover;
     }
 
     #einstein-bio-wrap{

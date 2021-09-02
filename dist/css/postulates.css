@@ -342,7 +342,8 @@
   grid-row: 34 / 44;
   grid-column: 10 / 16;
   border: 1px solid #181818;
-  background: purple; }
+  background-image: url("../../media/light-speed.gif");
+  background-size: cover; }
 
 #sec-postulates #einstein-bio-wrap {
   padding: 10px 50px 10px 10px;
