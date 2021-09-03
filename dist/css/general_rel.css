@@ -157,6 +157,15 @@
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(87, 1fr); }
 
+#sec-bib {
+  width: 100vw;
+  height: 1030px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  overflow: hidden;
+  background: rgba(93, 117, 161, 0.318); }
+
 .text {
   font-size: 16px;
   border-left: 3px solid #181818;

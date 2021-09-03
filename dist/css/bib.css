@@ -254,79 +254,18 @@
     height: 445px;
     bottom: -20px; }
 
-#rel-motion-t2-wrap {
-  background: #e9e9e9;
-  width: 100vw;
-  height: 100px; }
-  #rel-motion-t2-wrap #rel-motion-t2 {
-    float: right;
-    padding-right: 6%; }
-
-#sec-rel-motion .t3-wrap {
-  grid-column: 2 / 14;
-  font-weight: 400;
-  font-size: 36px; }
-  #sec-rel-motion .t3-wrap#t3-wrap-1 {
-    grid-row: 2 / 3; }
-  #sec-rel-motion .t3-wrap#t3-wrap-2 {
-    grid-row: 21 / 22; }
-  #sec-rel-motion .t3-wrap#t3-wrap-3 {
-    grid-row: 36 / 37; }
-  #sec-rel-motion .t3-wrap#t3-wrap-4 {
-    grid-row: 66 / 67; }
-  #sec-rel-motion .t3-wrap#t3-wrap-5 {
-    grid-row: 36 / 37; }
-  #sec-rel-motion .t3-wrap .t3 {
-    bottom: 2px; }
-
-#sec-rel-motion .text#text-1 {
-  grid-row: 23 / 27;
-  grid-column: 3 / 14;
-  padding-right: 4%; }
-
-#sec-rel-motion .text#text-2 {
-  grid-row: 38 / 41;
-  grid-column: 3 / 10; }
-
-#sec-rel-motion .text#text-3 {
-  grid-row: 62 / 64;
-  grid-column: 3 / 12; }
-
-#sec-rel-motion .text#text-4 {
-  grid-row: 70 / 75;
-  grid-column: 11 / 16; }
-
-#sec-rel-motion .text#text-5 {
-  grid-row: 80 / 82;
-  grid-column: 3 / 11; }
-
-#sec-rel-motion .vid-wrap {
-  border: 1px solid #181818;
-  padding: 1% 3% 3% 1%; }
-  #sec-rel-motion .vid-wrap#spin-vid-wrap {
-    grid-row: 4 / 18;
-    grid-column: 2 / 12; }
-    #sec-rel-motion .vid-wrap#spin-vid-wrap #spin-vid {
-      background-image: url("../../media/interstellar-docking.gif");
-      background-size: cover; }
-  #sec-rel-motion .vid-wrap#nascar-vid-wrap {
-    grid-row: 26 / 35;
-    grid-column: 10 / 16; }
-    #sec-rel-motion .vid-wrap#nascar-vid-wrap #nascar-vid {
-      width: 100%;
-      height: 100%; }
-  #sec-rel-motion .vid-wrap .vid {
-    border: 1px solid #181818;
+#sec-bib #bib-t2-wrap {
+  grid-row: 1;
+  grid-column: 1 / 16; }
+  #sec-bib #bib-t2-wrap #bib-t2 {
     width: 100%;
-    height: 100%;
-    background: #1a2b4b; }
+    text-align: right; }
 
-#sec-rel-motion .demo-wrap#motion-scale-demo-wrap {
-  grid-row: 68 / 79;
-  grid-column: 2 / 10;
-  border: 1px solid #181818; }
-
-#sec-rel-motion #solar-div {
-  grid-column: 2 / 16;
-  grid-row: 42 / 60;
-  border: 1px solid #181818; }
+#sec-bib #bib-wrap {
+  grid-row: 4 / 40;
+  grid-column: 2 / 16; }
+  #sec-bib #bib-wrap .border-bottom {
+    width: 100%;
+    border: 1px solid #e9e9e9; }
+  #sec-bib #bib-wrap a {
+    color: #0099ff; }

@@ -1,0 +1,23 @@
+@import "../config.scss";
+#sec-bib{
+    #bib-t2-wrap{
+        grid-row: 1;
+        grid-column: 1 / 16;
+        #bib-t2{
+            width: 100%;
+            text-align: right;
+        }
+    }
+    #bib-wrap{
+        grid-row: 4 / 40;
+        grid-column: 2 / 16;
+        
+        .border-bottom{
+            width: 100%;
+            border: 1px $BORDER;
+        }
+        a{
+            color: rgb(0, 153, 255);
+        }
+    }
+}
