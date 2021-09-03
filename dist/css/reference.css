@@ -25,7 +25,7 @@
 
 .sec {
   color: #e9e9e9;
-  min-width: 1300px; }
+  min-width: 1200px; }
 
 #sec-intro {
   width: 100vw;
@@ -346,7 +346,25 @@
 
 #sec-reference #non-inertial-reference-demo-wrap {
   grid-row: 75 / 85;
-  grid-column: 5 / 12; }
+  grid-column: 4 / 13; }
+  #sec-reference #non-inertial-reference-demo-wrap .f1 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50%; }
+    #sec-reference #non-inertial-reference-demo-wrap .f1#f1-slowing {
+      background-image: url("../../media/f1-braking.jpeg"); }
+    #sec-reference #non-inertial-reference-demo-wrap .f1#f1-starting {
+      background-image: url("../../media/f1-accleleration.jpeg"); }
+    #sec-reference #non-inertial-reference-demo-wrap .f1 .f1-text {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      height: 50px;
+      text-align: center;
+      background: #181818;
+      color: #e9e9e9;
+      padding-top: 15px; }
 
 #sec-reference #gal-transform-wrap {
   grid-row: 10 / 20;

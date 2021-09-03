@@ -25,7 +25,7 @@
 
 .sec {
   color: #e9e9e9;
-  min-width: 1300px; }
+  min-width: 1200px; }
 
 #sec-intro {
   width: 100vw;
@@ -340,8 +340,9 @@
   grid-column: 3 / 13; }
 
 #sec-GR .text#text-x {
-  grid-row: 80;
-  grid-column: 4 / 13; }
+  grid-row: 90 / 95;
+  grid-column: 4 / 13;
+  margin-bottom: 30%; }
 
 #sec-GR .sidenote {
   color: #454a5f; }
@@ -368,11 +369,20 @@
 #sec-GR #equivalence-demo-wrap {
   grid-row: 50 / 60;
   grid-column: 2 / 10;
-  right: 40px; }
+  right: 40px;
+  background: white;
+  background-image: url("../../media/equivalence.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 #sec-GR #spacetime-demo-wrap {
-  grid-row: 73 / 83;
-  grid-column: 4 / 13; }
+  grid-row: 73 / 86;
+  grid-column: 5 / 13;
+  background-image: url("../../media/spacetime.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 #sec-GR #gui-wrap {
   position: absolute;
