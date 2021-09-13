@@ -348,7 +348,52 @@
 
 #sec-reference #motion-reference-demo-wrap {
   grid-row: 10 / 20;
-  grid-column: 2 / 12; }
+  grid-column: 2 / 12;
+  background: none;
+  border: none; }
+  #sec-reference #motion-reference-demo-wrap #snake-prompt {
+    text-align: left; }
+  #sec-reference #motion-reference-demo-wrap #motion-reference-demo-inner-wrap {
+    overflow: hidden;
+    width: 800px;
+    height: 100%;
+    border: 1px solid #181818; }
+  #sec-reference #motion-reference-demo-wrap #snake-canvas {
+    width: 66%;
+    height: 60%;
+    background: #181818;
+    position: absolute;
+    top: 9%;
+    left: 16%; }
+  #sec-reference #motion-reference-demo-wrap #carriage {
+    position: absolute;
+    width: 90%;
+    height: 93%;
+    background: url("../../media/carriage-1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 3%;
+    left: 5%; }
+  #sec-reference #motion-reference-demo-wrap #parallax-background-wrap {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: 200%;
+    height: 100%;
+    overflow: hidden; }
+    #sec-reference #motion-reference-demo-wrap #parallax-background-wrap .parallax-background {
+      animation: slide-left-1 2s linear infinite;
+      width: 100%;
+      background-image: url("../../media/parallax.jpeg");
+      background-size: cover; }
+
+@keyframes slide-left-1 {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-100%); } }
 
 #sec-reference #non-inertial-reference-demo-wrap {
   grid-row: 75 / 85;
@@ -374,7 +419,25 @@
 
 #sec-reference #gal-transform-wrap {
   grid-row: 10 / 20;
-  grid-column: 13 / 16; }
+  grid-column: 13 / 17;
+  margin-right: 8%; }
+  #sec-reference #gal-transform-wrap .header {
+    border-top: 3px solid #181818; }
+  #sec-reference #gal-transform-wrap .bold {
+    font-weight: 700;
+    padding-top: 23px; }
+  #sec-reference #gal-transform-wrap .snake-motion-bar {
+    width: 100%;
+    border-top: 1px solid #181818;
+    height: 40px; }
+    #sec-reference #gal-transform-wrap .snake-motion-bar .left {
+      float: left; }
+    #sec-reference #gal-transform-wrap .snake-motion-bar .right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 80px;
+      text-align: right; }
 
 #sec-reference #gal-transform-vert {
   color: #454a5f;

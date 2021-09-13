@@ -55,9 +55,9 @@ function motion() {
     };
 
     const FPS = 60, PPM = 377.952;
-    let mc = document.getElementById('motion-canvas'),
-        mctx = mc.getContext('2d'),
-        mouse = captureMouse(mc),
+    let canvas = document.getElementById('motion-canvas'),
+        ctx = canvas.getContext('2d'),
+        mouse = captureMouse(canvas),
         ball = new Ball(),
         vx = 0,
         vy = 0,
@@ -67,15 +67,15 @@ function motion() {
         oldx, oldy, oldvx, oldvy,
         ms;
 
-    mc.width = mc.clientWidth;
-    mc.height = mc.clientHeight;
-    ball.x = mc.width / 2;
-    ball.y = mc.height / 2;
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    ball.x = canvas.width / 2;
+    ball.y = canvas.height / 2;
 
     let cleft = 0,
-        cright = mc.width,
+        cright = canvas.width,
         ctop = 0,
-        cbottom = mc.height;
+        cbottom = canvas.height;
 
     // 37.7952 pixels per cm or 
     // 377.952 pixels per metre`
@@ -84,26 +84,26 @@ function motion() {
 
     // x pixels every frame, frame is a 60th of a second
     // pixels * 60 / 377.952
-    mc.addEventListener('mousedown', function () {
+    canvas.addEventListener('mousedown', function () {
         if (containsPoint(ball.getBounds(), mouse.x, mouse.y)) {
         isMouseDown = true;
         oldx = ball.x;
         oldy = ball.y;
-        mc.addEventListener('mouseup', onMouseUp, false);
-        mc.addEventListener('mousemove', onMouseMove, false);
-        mc.addEventListener('mouseout', onMouseOut, false);
+        canvas.addEventListener('mouseup', onMouseUp, false);
+        canvas.addEventListener('mousemove', onMouseMove, false);
+        canvas.addEventListener('mouseout', onMouseOut, false);
         }
     }, false);
         
     function onMouseUp () {
         isMouseDown = false;
-        mc.removeEventListener('mouseup', onMouseUp, false);
-        mc.removeEventListener('mousemove', onMouseMove, false);
+        canvas.removeEventListener('mouseup', onMouseUp, false);
+        canvas.removeEventListener('mousemove', onMouseMove, false);
     }
 
     function onMouseOut() {
-        mc.removeEventListener('mouseup', onMouseUp, false);
-        mc.removeEventListener('mousemove', onMouseMove, false);
+        canvas.removeEventListener('mouseup', onMouseUp, false);
+        canvas.removeEventListener('mousemove', onMouseMove, false);
         updatePos();
     }
 
@@ -211,21 +211,21 @@ function motion() {
         track();
     }
 
-    function drawFrame () {
-        window.requestAnimationFrame(drawFrame, mc);
-        mctx.clearRect(0, 0, mc.width, mc.height);
+    function animate () {
+        window.requestAnimationFrame(animate, canvas);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         
         if (isMouseDown) {
             dragPos();
         } else {
             updatePos();
         }
-        ball.draw(mctx);
+        ball.draw(ctx);
     };
     let gravitySlider = document.getElementById("gravity-slider")
         gravitySlider.addEventListener('input', () => {
             gravity = parseFloat(gravitySlider.value)*PPM/FPS;
     });
-    drawFrame();
+    animate();
 }
 motion();

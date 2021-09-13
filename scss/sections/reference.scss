@@ -109,6 +109,63 @@
     #motion-reference-demo-wrap{
         grid-row: 10 / 20;
         grid-column: 2 / 12;
+        background: none;
+        border: none;
+
+        #snake-prompt{
+            text-align: left;
+        }
+        #motion-reference-demo-inner-wrap{
+            overflow: hidden;
+            width: 800px;
+            height: 100%;
+            border: 1px $BORDER_D;
+        }
+        #snake-canvas{
+            width: 66%;
+            height: 60%;
+            background: $DARK_P;
+            position: absolute;
+            top: 9%;
+            left: 16%;
+        }
+        #carriage{
+            position: absolute;
+            width: 90%;
+            height: 93%;
+            background: url("../../media/carriage-1.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 3%;
+            left: 5%;
+        }
+
+        #parallax-background-wrap{
+            position: absolute;
+            display:flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            width: 200%;
+            height: 100%;
+            overflow: hidden;
+            .parallax-background{
+                animation: slide-left-1 2s linear infinite;
+                width: 100%;
+                background-image: url("../../media/parallax.jpeg");
+                background-size: cover;
+            }
+
+        }
+
+        @keyframes slide-left-1{
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
     }
 
     #non-inertial-reference-demo-wrap{
@@ -140,7 +197,30 @@
     }
     #gal-transform-wrap{
         grid-row: 10 / 20;
-        grid-column: 13 / 16;
+        grid-column: 13 / 17;
+        margin-right: 8%;
+        .header{
+            border-top: 3px $BORDER_D;
+        }
+        .bold{
+            font-weight: 700;
+            padding-top: 23px;
+        }
+        .snake-motion-bar{
+            width: 100%;
+            border-top: 1px $BORDER_D;
+            height: 40px;
+            .left{
+                float: left;
+            }
+            .right{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 80px;
+                text-align: right;
+            }
+        }
     }
     #gal-transform-vert{
         color: $DARK_S;

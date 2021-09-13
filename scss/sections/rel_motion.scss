@@ -90,14 +90,12 @@
         }
     }
 
-    .demo-wrap{
-
-        &#motion-scale-demo-wrap{
-            grid-row: 68 / 79;
-            grid-column: 2 / 10;
-            border: 1px $BORDER_D;
-        }
+    #motion-scale-demo-wrap{
+        grid-row: 68 / 79;
+        grid-column: 2 / 10;
+        border: 1px $BORDER_D;
     }
+
 
     #orbits-demo-wrap{
         grid-column: 2 / 16;

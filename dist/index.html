@@ -162,14 +162,14 @@
     </section>
     <!-- <section class="sec" id="sec-gap"></section> -->
 <!-- transition transition transition transition transition-->
-    <section class="sec" id="sec-transition">
+    <!-- <section class="sec" id="sec-transition">
         <div class="shade" id="shade-1"></div>
         <div class="shade" id="shade-2"></div>
         <div class="shade" id="shade-3"></div>
         <div class="shade" id="shade-4"></div>
         <div class="shade" id="shade-5"></div>
         <div class="shade" id="shade-6"></div>
-    </section>
+    </section> -->
  <!------------------------------------------ PART 2 ----------------------------------------------->
     <section class="sec" id="sec-motion">
 <!-- sticky demo sticky demo sticky demo -->
@@ -428,13 +428,49 @@
             
         </div>
         <div class="demo-wrap" id="motion-reference-demo-wrap">
-            <!-- contrast two inertial reference frames, vehicle and earth -->
+            <div id="motion-reference-demo-inner-wrap">
+                <!-- contrast two inertial reference frames, vehicle and earth -->
+                <div id="parallax-background-wrap">
+                    <div class="parallax-background" id="parallax-background-1"></div>
+                    <div class="parallax-background" id="parallax-background-2"></div>
+                </div>
+                <div id="carriage"></div>
+                <canvas id="snake-canvas"></canvas>
+            </div>
+            <div class="prompt" id="snake-prompt">Use the A, W, S and D keys to play</div>
         </div>
         <div id="gal-transform-vert">GALILEAN TRANSFORM</div>
 
         <div class="text" id="gal-transform-wrap">
             <div class="text" id="gal-tranform-text">
-                 GSFJG PSFDIGJ PRJGLKFDGJDRG DROIG DF GDPFJGDF G   GDF DFOGI FD F F GJPODJ RGIEG DFS E90R034
+                <div class="header">Snake Motion (m/s)</div>
+                <div class=" bold ">PHONE frame of reference</div>
+                <div class="snake-motion-bar">
+                    <span class="left">phone velocity x</span>
+                    <span class="right">0</span>
+                </div>
+                <div class="snake-motion-bar">
+                     <span class="left">snake velocity x</span>
+                     <span class="right" id="phone-vx"></span>
+                 </div>
+                 <div class="snake-motion-bar">
+                     <span class="left">snake velocity y</span>
+                     <span class="right" id="phone-vy"></span>
+                 </div>
+                <div class="bold">GROUND frame of reference</div>
+                 <div class="snake-motion-bar">
+                     <span class="left">phone velocity x</span>
+                     <span class="right">5</span>
+                 </div>
+                 <div class="snake-motion-bar">
+                     <span class="left">snake velocity x</span>
+                     <span class="right" id="ground-vx"></span>
+                 </div>
+                 <div class="snake-motion-bar">
+                     <span class="left">snake velocity y</span>
+                     <span class="right" id="ground-vy"></span>
+                 </div>
+                
             </div>
         </div>
         <div class="t3-wrap" id="t3-wrap-1">
@@ -937,5 +973,6 @@
 <script src="../js/SR.js"></script>
 <script src="../js/gravity.js"></script>
 <script src="../js/orbits.js"></script>
+<script src="../js/snake.js"></script>
 <!-- <script type="module" src="../js/ocean.js"></script> -->
 </html>
