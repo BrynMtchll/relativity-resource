@@ -25,11 +25,11 @@
         font-size: $FONT_III;
         bottom: 5px;
         &#t3-wrap-1{
-            grid-row: 11;
+            grid-row: 16;
         }
 
         &#t3-wrap-2{
-            grid-row: 21;
+            grid-row: 23;
         }
         &#t3-wrap-3{
             grid-row: 30;
@@ -46,15 +46,15 @@
     }
     .text{
         &#text-1{
-            grid-row: 5 / 7;
+            grid-row: 9 / 11;
             grid-column: 3 / 10;
         }
         &#text-2{
-            grid-row: 13 / 16;
+            grid-row: 18 / 21;
             grid-column: 3 / 12;
         }
         &#text-3{
-            grid-row: 23 / 26;
+            grid-row: 25 / 28;
             grid-column: 3 / 12;
         }
         &#text-5{
@@ -91,6 +91,21 @@
 
     }
 
+    #divide{
+        position: absolute;
+        top: 0;
+
+    }
+
+    #SR-date{
+        grid-row: 4;
+        grid-column: 7;
+        text-orientation: sideways;
+        writing-mode: horizontal-tb;
+        left: 30px;
+        padding: 50px 0;
+    }
+
     .descriptor{
         grid-row: 4;
         padding-left: 5%;
@@ -116,6 +131,7 @@
         grid-row: 20 / 22;
         grid-column: 14 / 17;
         border: 0;
+        opacity: 0.75;
     }
     #light-speed-demo-wrap{
         grid-row: 34 / 44;
@@ -126,10 +142,14 @@
     }
 
     #einstein-bio-wrap{
-        padding: 10px 50px 10px 10px;
+        padding: 10px 10px 10px 10px;
+        margin-right: 20px;
         grid-row: 5 / 15;
         grid-column: 14 / 17;
         border-left: 1px $BORDER_D;
+        #einstein-photo{
+            background-image: url("../../media/einstein.jpeg");
+        }
     }
 
     #light-speed-tb-wrap{

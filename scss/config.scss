@@ -175,7 +175,7 @@ $BLUE_L: rgb(136, 0, 95);
 
 #sec-postulates{
     width: 100vw;
-    height: 3500px;
+    height: 3600px;
     color: $DARK_P;
     background: $LIGHT_P;
     display: grid;
@@ -254,6 +254,12 @@ $BLUE_L: rgb(136, 0, 95);
     }
 }
 
+.prompt{
+    text-align: right;
+    padding-top: 10px;
+    border: 0;
+}
+
 .t3-wrap{
     .underline{
         position: absolute;
@@ -281,11 +287,15 @@ $BLUE_L: rgb(136, 0, 95);
 }
 
 .bio-wrap{
+    background: $DARK_S_O;
+
     .bio-photo{
         width: 100%;
         border: 1px $BORDER_D;
         height: 250px;
         margin-bottom: 10px;
+        background-position: center;
+        background-size: cover;
     }
     .bio-years{
         font-weight: 500;

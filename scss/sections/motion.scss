@@ -72,6 +72,11 @@
             
         }
     }
+
+    #ball-prompt{
+        grid-column: 8 / 16;
+        grid-row: 5;
+    }
     #motion-canvas{
         grid-column: 8 / 16;
         grid-row: 6 / 22;
@@ -90,8 +95,6 @@
         }
     }
 
-    #motion-canvas-reset-btn{
-    }
     .motion-measure-wrap{
         grid-column: 4/ 7;
         border-bottom: 1px $BORDER_D;

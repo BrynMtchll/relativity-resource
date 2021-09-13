@@ -153,23 +153,33 @@
 
     .bio-wrap{
         &#gal-bio-wrap{
-            padding: 10px 50px 10px 10px;
+            padding: 10px 10px 10px 10px;
             grid-row: 23 / 33;
             grid-column: 14 / 17;
+            margin-right: 20px;
             border-left: 1px $BORDER_D;
+
+            #gal-photo{
+                background-image: url("../../media/galileo.jpeg");
+            }
 
         }
         &#newt-bio-wrap{
-            padding: 10px 10px 10px 50px;
+            padding: 10px 10px 10px 10px;
             grid-row: 35 / 45;
             grid-column: 1 / 4;
+            margin-left: 20px;
             border-right: 1px $BORDER_D;
             text-align: right;
+
+            #newt-photo{
+                background-image: url("../../media/newton.jpeg");
+            }
         }
     }
 
     #force-side-def{
-        grid-row: 40 / 42;
+        grid-row: 46 / 48;
         grid-column: 14 / 17;
         border: 0;
     }

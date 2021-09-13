@@ -24,12 +24,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Sky.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/objects/Water.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/device-orientation-controls@1.1.0/device-orientation-controls.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
     <!-- <script type="module">
@@ -174,6 +175,9 @@
 <!-- sticky demo sticky demo sticky demo -->
         <div class="motion-sticky-grid-wrap" id="motion-sticky-grid-wrap-1">
             <div class="motion-sticky-grid" id="motion-sticky-grid-1">
+                <div class="prompt text" id="ball-prompt">
+                    <span class="light"> Click and drag the ball around </span>
+                </div>
                 <canvas id="motion-canvas"></canvas>
                 <div class="reset-btn" id="s-reset-btn"></div>
                 <div class="s-measure-wrap motion-measure-wrap" id="s-measure-wrap-m">
@@ -358,9 +362,29 @@
         <div class="text" id="text-2">
             <span class="light">The answer</span> <br>
             <div class="header">yes, and no ... relatively.</div>
-            <span class="bottom">Let's take a look at the solar system.</span>
+            Let's take a look at the solar system. <br>
+            See if you can make it look like the solar system is orbitting a planet (zoom out). 
         </div>
-        <div id="solar-div"></div>
+        <div class="demo-wrap" id="orbits-demo-wrap">
+            <div class="prompt text" id="orbits-prompt">
+               <div class="light"> zoom, drag, click the buttons </div>
+            </div>
+            <canvas id="orbits-canvas"></canvas>
+            <div class="buttons-wrap" id="button-planets-wrap">
+                <button class="button" id="button-sun">Sun</button>
+                <button class="button" id="button-mercury">Mercury</button>
+                <button class="button" id="button-venus">Venus</button>
+                <button class="button" id="button-earth">Earth</button>
+                <button class="button" id="button-mars">Mars</button>
+                <button class="button" id="button-jupiter">Jupiter</button>
+                <button class="button" id="button-saturn">Saturn</button>
+                <button class="button" id="button-neptune">Neptune</button>
+                <button class="button" id="button-uranus">Uranus</button>
+            </div>
+            <div class="buttons-wrap" id="button-orbits-wrap">
+                <button class="button" id="button-orbits">toggle orbit lines</button>
+            </div>
+        </div>
         <div class="text" id="text-3">
             <div class="header">When you're moving with something, your stationary relative to it </div>
             <span class="bottom">That's why you can't see or feel the Earth move.</span> 
@@ -425,9 +449,11 @@
             <div class="vertline leftline-1"></div>
             <div class="vertline leftline-2"></div>
             <div class="bio-photo" id="gal-photo"></div>
-            <div class="bio-years" id="gal-years">xxxx - xxxx</div>
+            <div class="bio-name" id="gal-name">Galileo Galilei</div>
+
+            <div class="bio-years" id="gal-years">1564 - 1642</div>
             <div class="bio" id="gal-bio">
-                d fdh ef d89s fe  nds fen 9e8 fdsfh aef ldsf jkhadf eefh sd98f sdfefehflkjsd fdh fd fhud fef,s dufasefoawef df dseuf 9se dsfl 
+                "father of observational astronomy, modern physics and the scientific method"
             </div>
         </div>
         <div class="text" id="text-2">
@@ -451,7 +477,7 @@
             <div class="bio-years" id="newt-years">1643 - 1727</div>
             <div class="bio" id="newt-bio">
                 Physicist and Mathematician <br>
-                culminating figure of science in the 17th century
+                culminating figure of science
             </div>
         </div>
         <div class="side-def text" id="force-side-def">
@@ -547,8 +573,8 @@
             </div>
             <div class="t2" id="SR-t2">SPECIAL RELATIVITY</div>
         </div>
-        <div class="descriptor" id="descriptor-1">
-            <span>published</span><span>1905</span>
+        <div class="date" id="SR-date">
+            PUBLISHED 1905
         </div>
         <div class="text" id="text-1">
             <span class="light">what is it?</span>  <br>
@@ -560,9 +586,10 @@
             <div class="vertline leftline-2"></div>
             <div class="bio-photo" id="einstein-photo"></div>
             <div class="bio-name" id="newt-name">Ablert Einstein</div>
-            <div class="bio-years" id="einstein-years">xxxx - xxxx</div>
+            <div class="bio-years" id="einstein-years">1879 - 1955</div>
             <div class="bio" id="einstein-bio">
-                d fdh ef d89s fe  nds fen 9e8 fdsfh aef ldsf jkhadf eefh sd98f sdfefehflk
+                Theoretical physicists, one of the greatest of all time.
+                relativity, quantum mechanics
             </div>
         </div>
         <div class="t3-wrap" id="t3-wrap-1">
@@ -573,9 +600,9 @@
             <div class="underline underline-2"></div>
             <div class="underline underline-3"></div>
         </div>
-        <div class="side-def" id="postulate-side-def">
-            Whats a postulate?
-            <div class="bordered">fhds fd fadsfdhs fhdss9d8f esdk fd</div>
+        <div class="side-def text" id="postulate-side-def">
+                Whats a postulate?
+                <div class="bordered light">A thing suggested or assumed to be true as the basis for reasoning</div>
         </div>
         <div class="text" id="text-2">
             <div class="header">
@@ -585,6 +612,7 @@
                 ok, sure, thermodynamics, magnetism, motion etc are the same on an inertial space ship and Earth <br>
             </div> 
             </div>
+        </div>
         <div class="t3-wrap" id="t3-wrap-2">
             <div class="t3" id="t3-2">
                 Second Postulate.
@@ -786,7 +814,7 @@
             <div id="gui-wrap"></div>
         </div>
         <div class="sidenote" id="sidenote-1">
-            can you make things orbit?
+            Click, drag. Can you make things orbit?
         </div>
         <div class="t3-wrap" id="t3-wrap-2">
             <div class="t3" id="t3-2">
@@ -908,5 +936,6 @@
 <script src="../js/motion.js"></script>
 <script src="../js/SR.js"></script>
 <script src="../js/gravity.js"></script>
+<script src="../js/orbits.js"></script>
 <!-- <script type="module" src="../js/ocean.js"></script> -->
 </html>
