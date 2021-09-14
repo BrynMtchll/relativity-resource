@@ -117,14 +117,14 @@ function orbits() {
         orbits.push(orbit);
     };
 
-    createPlanet("Mercury", 1, 46, 5);
-    createPlanet("Venus", 2, 56, 3);
-    createPlanet("Earth", 2.5, 65, 4);
-    createPlanet("Mars", 1.5, 73, 2);
-    createPlanet("Jupiter", 8, 90, 0.8);
-    createPlanet("Saturn", 6, 130, 0.5);
-    createPlanet("Uranus", 4, 180, 0.4);
-    createPlanet("Neptune", 4, 250, 0.2);
+    createPlanet("mercury", 1, 46, 5);
+    createPlanet("venus", 2, 56, 3);
+    createPlanet("earth", 2.5, 65, 4);
+    createPlanet("mars", 1.5, 73, 2);
+    createPlanet("jupiter", 8, 90, 0.8);
+    createPlanet("saturn", 6, 130, 0.5);
+    createPlanet("uranus", 4, 180, 0.4);
+    createPlanet("neptune", 4, 250, 0.2);
 
     {
         const ambientLight = new THREE.AmbientLight( 0x404040 );
